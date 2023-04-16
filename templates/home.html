@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block webcontent %}
+
+<div class="container">
+  {% for entry in blog_entries %}
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">{{entry.title}}</div>
+        <div class="panel-body"><img src="https://i.ebayimg.com/images/g/Ld0AAOSwhnxj3dIc/s-l1600.jpg" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">{{entry.body}}</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% endfor %}
+
+{% endblock %}
